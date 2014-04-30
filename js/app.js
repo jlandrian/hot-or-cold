@@ -12,20 +12,20 @@
     var theGuess = function(){
         var myNumber = $("#userGuess").val();
         var countUp = $("#count").text(startingCount += 1);
-        var difference = Math.abs(myNumber - rando);
+        var difference = (myNumber - rando);
         if(myNumber === rando) {
             $("#feedback").text("you got it");
         } else if (difference >= 50) {
             $("#feedback").text("cold...");
             $("#feedback").css("background-color: #00FFFF");
         } else if (difference >= 30 && difference < 50) {
-            $("#feedback").text("warming up");
+            $("#feedback").text("warm");
         } else if (difference >= 20 && difference < 30) {
-            $("#feedback").text("warmer still...");
+            $("#feedback").text("warmer");
         } else if (difference >=10 && difference < 20) {
-            $("feedback").text("so dang hot!!!");
+            $("feedback").text("HOT!");
         } else {
-            $("#feedback").text("FROZEN");
+            $("#feedback").text("REALLY HOT!");
             countUp;
         }
         
