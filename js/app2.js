@@ -89,8 +89,11 @@ $(document).ready(function(){
     $("#guessButton").on("click", buttonPress);
     
     //---Run the buttonPress function when Enter is pressed too---//
-    
-        
+    $("body").on("keyup", function(event) {
+        if(event.keyCode == 13) {
+            buttonPress();
+        }
+    });         
     
     //---This starts the New Game when clicked---//
     $(".new").on("click", startNewGame);
