@@ -53,8 +53,8 @@ function theDistance(guessedNum) {
         $("#feedback").text("cooling down...");
         $("#feedback").css("background-color", "#3FAAF2");
     } else {
-        $("#feedback").text("warming up!");
-        $("#feedback").css("background-color", "#FF7B08");
+        $("#feedback").text("getting hotter");
+        $("#feedback").css("background-color", "#FF1408");
     }
     prevGuess = guessedNum;
 };
